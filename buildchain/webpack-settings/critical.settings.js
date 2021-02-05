@@ -15,7 +15,7 @@ module.exports = {
                 uri: '',
                 template: 'index'
             },
-            {
+            /*{
                 uri: 'errors/offline',
                 template: 'errors/offline'
             },
@@ -30,7 +30,7 @@ module.exports = {
             {
                 uri: 'errors/404',
                 template: 'errors/404'
-            },
+            },*/
         ]
     },
 };
