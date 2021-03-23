@@ -2,7 +2,7 @@
 
 // node modules
 require('dotenv').config();
-const path = require('path')
+const path = require('path');
 
 // settings
 module.exports = {
