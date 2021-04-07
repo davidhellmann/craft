@@ -1,5 +1,23 @@
 # nystudio107/craft Change Log
 
+## 2.4.33 - 2021.04.06
+### Changed
+* Use `rm -f` to ensure no errors if the file doesn’t exist
+
+## 2.4.32 - 2021.04.05
+### Changed
+* Use Tailwind CSS `^2.1.0` with JIT
+
+## 2.4.31 - 2021.04.05
+### Added
+* Added `make update` to update Composer & NPM packages
+* Added `make update-clean` to completely remove `vendor/` and `node_modules/`, then update Composer & NPM packages
+
+## 2.4.30 - 2021.04.05
+### Fixed
+* Fixed `make up` command by removing an errant `$`
+* Add `storage/config-deltas/` to prevent permissions issues
+
 ## 2.4.29 - 2021.03.25
 ### Added
 * Added `make clean` to the Makefile
