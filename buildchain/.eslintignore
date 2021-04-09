@@ -1,0 +1,10 @@
+node_modules/**
+../cypress/**
+../cms/modules/**
+../cms/storage/**
+../cms/vendor/**
+../src/fonts/**
+../src/inlineJs/**
+../src/ferdi/**
+../src/js/workbox-catch-handler.js
+../cms/web/**
