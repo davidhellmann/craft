@@ -1,4 +1,4 @@
-dateModified: 1617953841
+dateModified: 1622655355
 email:
   fromEmail: andrew@nystudio107.com
   fromName: Craft
@@ -88,7 +88,7 @@ plugins:
     schemaVersion: 1.0.0
   webperf:
     edition: standard
-    enabled: true
+    enabled: false
     licenseKey: $PLUGIN_WEBPERF_LICENSE
     schemaVersion: 1.0.1
 system:
