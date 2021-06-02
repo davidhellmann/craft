@@ -34,6 +34,7 @@ services:
       - ./cms/vendor:/var/www/project/cms/vendor:delegated
       - ./cms/storage/logs:/var/www/project/cms/storage/logs:delegated
       - ./cms/storage/runtime/compiled_templates:/var/www/project/cms/storage/runtime/compiled_templates:delegated
+      - ../craft-gonzo:/var/www/craft-gonzo:delegated
   # php - run php-fpm with xdebug
   php_xdebug:
     build:
