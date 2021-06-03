@@ -25,7 +25,7 @@ module.exports = {
         dist: path.resolve('../cms/web/dist/'),
     },
     urls: {
-        criticalCss: 'http://example.test/',
+        criticalCss: 'https://stage.docker.baukasten.io/',
         publicPath: () => process.env.PUBLIC_PATH || '/dist/',
     },
 };
