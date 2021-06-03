@@ -1,5 +1,28 @@
 # nystudio107/craft Change Log
 
+## 2.4.38 - 2021.05.23
+### Changed
+* Run php container as the `www-data` user to avoid permissions issues
+
+## 2.4.37 - 2021.05.14
+### Changed
+* Added `logs` and `compiled_templates` dirs back in, so they appear on the client side
+
+## 2.4.36 - 2020.05.09
+### Changed
+* Silence errors from the root `post-create-project-cmd` script
+
+### Fixed
+* Fixed a breaking change of `dev` to `devMiddleware` in `webpack-dev-server` `^4.0.0-beta.3`
+
+## 2.4.35 - 2021.04.27
+### Changed
+* Delegate all of `storage` & `cpresources` volumes, let the container own it
+
+## 2.4.34 - 2021.04.10
+### Added
+* Added `make craft` to the Makefile commands
+
 ## 2.4.33 - 2021.04.06
 ### Changed
 * Use `rm -f` to ensure no errors if the file doesn’t exist
