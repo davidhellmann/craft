@@ -1,4 +1,4 @@
-dateModified: 1622655355
+dateModified: 1622711182
 email:
   fromEmail: andrew@nystudio107.com
   fromName: Craft
@@ -8,6 +8,11 @@ graphql:
     enabled: false
     expiryDate: null
 plugins:
+  craft-gonzo:
+    edition: standard
+    enabled: true
+    licenseKey: 7TYLGKBX07O1P1ZKFGHWDI6L
+    schemaVersion: 1.0.0-beta.1
   fastcgi-cache-bust:
     edition: standard
     enabled: true
@@ -96,7 +101,7 @@ system:
   live: true
   name: Project
   retryDuration: 60
-  schemaVersion: 3.6.7
+  schemaVersion: 3.6.8
   timeZone: America/New_York
 users:
   allowPublicRegistration: false

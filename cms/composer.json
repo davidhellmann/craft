@@ -43,12 +43,7 @@
       "@pre-craft-update",
       "@post-craft-update"
     ],
-    "pre-craft-update": [
-      "mkdir -p ./cms/storage",
-      "mkdir -p ./cms/config/project",
-      "mkdir -p ./cms/web/cpresources",
-      "mkdir -p ./cms/web/assets"
-    ],
+    "pre-craft-update": [],
     "post-craft-update": [
       "@php craft install/check && php craft migrate/all --no-content || exit 0",
       "@php craft install/check && php craft project-config/apply --force || exit 0",
