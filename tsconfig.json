@@ -14,7 +14,7 @@
     "outDir": "./cms/web/dist/",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./src/*",
       ]
     },
     "resolveJsonModule": true,

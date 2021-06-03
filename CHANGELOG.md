@@ -1,5 +1,69 @@
 # nystudio107/craft Change Log
 
+## 2.4.33 - 2021.04.06
+### Changed
+* Use `rm -f` to ensure no errors if the file doesn’t exist
+
+## 2.4.32 - 2021.04.05
+### Changed
+* Use Tailwind CSS `^2.1.0` with JIT
+
+## 2.4.31 - 2021.04.05
+### Added
+* Added `make update` to update Composer & NPM packages
+* Added `make update-clean` to completely remove `vendor/` and `node_modules/`, then update Composer & NPM packages
+
+## 2.4.30 - 2021.04.05
+### Fixed
+* Fixed `make up` command by removing an errant `$`
+* Add `storage/config-deltas/` to prevent permissions issues
+
+## 2.4.29 - 2021.03.25
+### Added
+* Added `make clean` to the Makefile
+* Added **Makefile Project Commands** to `README.md`
+* Added `make composer xxx` & `make npm xxx` commands
+
+### Changed
+* Remove deprecated `scripts/docker_prod_build.sh` in favor of `make build`
+
+## 2.4.28 - 2021.03.24
+### Fixed
+* Fixed an issue with the `webpack-dev-server` version `^4.0.0-beta.1` by moving the `overlay` config setting to `client` (https://github.com/nystudio107/craft/issues/54)
+
+## 2.4.27 - 2021.03.22
+### Added
+* Added `make` command aliases
+
+### Changed
+* Use `@tailwindcss/jit` for the CSS generation
+
+### Fixed
+* Fix webpack buildchain pipeline
+
+## 2.4.26 - 2021.03.07
+### Changed
+* Use aliases for import paths
+* Remove version, require, autoload, and config from the project `composer.json`
+* Use Tailwind CSS `^2.0.3`
+* Use official MariaDB images
+* Use `craftcms/cms` version `^3.6.7`
+* Updated db-seed & Project Config to match `craftcms/cms` version `^3.6.7`
+
+## 2.4.25 - 2021.02.09
+### Added
+* Use PHP 8.0 Alpine images for the prod & dev containers
+
+### Changed
+* Ensure that the `cms/config` directory has the right permissions
+
+### Fixed
+* Updated `buddy.yaml` to match with Alpine update
+
+## 2.4.24 - 2021.02.03
+### Fixed
+* Fixed an issue with favicon generation caused by changes in `favicons-webpack-plugin`
+
 ## 2.4.23 - 2021.02.02
 ### Changed
 * Use `get-webpack-config` package

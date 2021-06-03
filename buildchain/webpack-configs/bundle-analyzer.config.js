@@ -13,6 +13,7 @@ module.exports = (type = 'modern', settings) => {
             new BundleAnalyzerPlugin({
                 analyzerMode: 'static',
                 reportFilename: filename,
+        openAnalyzer: false,
             }),
         ],
     });

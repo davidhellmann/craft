@@ -1,0 +1,28 @@
+{#<%
+var splittedPath = modulePath.split('/');
+var simple = splittedPath[0] === splittedPath[1];
+var mn = simple ? moduleName : splittedPath[0] + moduleName.charAt(0).toUpperCase() + moduleName.slice(1);
+mn = mn.replace('-', '_');
+var cn = pathOptions.key.charAt(0) + '-' + mn;
+%>#}
+{# Set Defaults #}
+{% set defaults = {
+  cn: '<%= cn %>',
+  data: {},
+  js: false,
+  customClasses: '',
+  foo: null
+} %}
+
+{# Merge Default with Options #}
+{% set props = props is defined ? defaults|merge(props) : defaults %}
+
+{# Macros #}
+{% import '_macros/_macro-settings.twig' as module %}
+
+{% if props.foo %}
+  <div class="{{ props.customClasses }}" {{ module.settings(props) }}>
+    <%= mn %>
+  </div>
+{% endif %}
+
