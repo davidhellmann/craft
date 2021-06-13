@@ -1,0 +1,52 @@
+{# #}
+{# Set Defaults #}
+{% set defaults = {
+  cn: 'c-button',
+  data: {},
+  js: true,
+  customClasses: '',
+  text: null,
+  url: null,
+  style: 'primary',
+  display: 'inline-grid',
+  baseStyles: 'relative  rounded-full  px-6  pt-2 pb-3  font-sans-medium  text-center  items-center gap-4  grid-flow-col justify-center whitespace-nowrap',
+  icon: null,
+  reverse: false,
+} %}
+
+{# Merge Default with Options #}
+{% set props = props is defined ? defaults|merge(props) : defaults %}
+
+{# Macros #}
+{% import '_macros/_macro-settings.twig' as module %}
+
+{% if props.text %}
+  {% set tag = props.url ? 'a' : 'button' %}
+  {% set attr = props.url ? 'href=' ~ props.url : 'type=button' %}
+
+  {% set mega = 'bg-primary  hover:bg-primary  text-white  border-2 border-primary hover:border-primary  shadow-base  pt-3 pb-4' %}
+  {% set primary = 'bg-primary  hover:bg-primary  text-white  border-2 border-primary hover:border-primary' %}
+  {% set secondary = 'bg-white  hover:bg-white  text-primary  border-2 border-primary  hover:border-primary' %}
+  {% set tertiary = 'bg-gray  hover:bg-gray  text-white  border-2 border-gray  hover:border-gray' %}
+  {% set styleClasses = '' %}
+
+  {% if props.style == 'mega' %}{% set styleClasses = mega %}{% endif %}
+  {% if props.style == 'primary' %}{% set styleClasses = primary %}{% endif %}
+  {% if props.style == 'secondary' %}{% set styleClasses = secondary %}{% endif %}
+  {% if props.style == 'tertiary' %}{% set styleClasses = tertiary %}{% endif %}
+
+  <{{ tag }} {{ attr }}
+  class="{{ props.display }} {{ props.baseStyles }}  {{ styleClasses }}  {{ props.customClasses }}"
+  {{ module.settings(props) }}>
+  {% if props.icon %}
+    {# -- Icon -- #}
+    {% include '_components/icon/icon.twig' with {
+      props: {
+        customClasses: (props.reverse ? 'col-start-2') ~ ' transform translate-y-px',
+        icon: props.icon ??? null
+      }
+    } only %}
+  {% endif %}
+  {{ props.text }}
+  </{{ tag }}>
+{% endif %}
